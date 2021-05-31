@@ -5,7 +5,9 @@
   "description": "mediasoup demo server",
   "author": "Iñaki Baz Castillo <ibc@aliax.net>",
   "license": "All Rights Reserved",
+  "main": "server/server.js",
   "scripts": {
+    "start": "server/server.js"
   },
   "dependencies": {
     "mediasoup": "^3.7.9"
