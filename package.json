@@ -5,12 +5,14 @@
   "description": "mediasoup demo server",
   "author": "Iñaki Baz Castillo <ibc@aliax.net>",
   "license": "All Rights Reserved",
-  "main": "server/server.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "server/server.js"
+    "lint": "eslint -c .eslintrc.js server.js lib connect.js",
+    "start": "DEBUG=${DEBUG:='*mediasoup* *INFO* *WARN* *ERROR*'} INTERACTIVE=${INTERACTIVE:='true'} node server.js",
+    "connect": "node connect.js"
   },
   "dependencies": {
-    "mediasoup": "^3.7.9"
+    "express": "^4.17.1"
   },
   "devDependencies": {
   }
